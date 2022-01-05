@@ -589,7 +589,7 @@ namespace Arkanoid
             this.lbl_life.AutoSize = true;
             this.lbl_life.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_life.ForeColor = System.Drawing.Color.Lime;
-            this.lbl_life.Location = new System.Drawing.Point(375, 9);
+            this.lbl_life.Location = new System.Drawing.Point(374, 9);
             this.lbl_life.Name = "lbl_life";
             this.lbl_life.Size = new System.Drawing.Size(92, 28);
             this.lbl_life.TabIndex = 128;
@@ -600,7 +600,7 @@ namespace Arkanoid
             this.lbl_stage.AutoSize = true;
             this.lbl_stage.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_stage.ForeColor = System.Drawing.Color.Lime;
-            this.lbl_stage.Location = new System.Drawing.Point(10, 9);
+            this.lbl_stage.Location = new System.Drawing.Point(12, 9);
             this.lbl_stage.Name = "lbl_stage";
             this.lbl_stage.Size = new System.Drawing.Size(105, 28);
             this.lbl_stage.TabIndex = 127;
@@ -611,7 +611,7 @@ namespace Arkanoid
             this.lbl_score.AutoSize = true;
             this.lbl_score.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_score.ForeColor = System.Drawing.Color.Lime;
-            this.lbl_score.Location = new System.Drawing.Point(166, 9);
+            this.lbl_score.Location = new System.Drawing.Point(181, 9);
             this.lbl_score.Name = "lbl_score";
             this.lbl_score.Size = new System.Drawing.Size(108, 28);
             this.lbl_score.TabIndex = 126;
