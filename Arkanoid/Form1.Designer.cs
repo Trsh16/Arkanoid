@@ -589,7 +589,7 @@ namespace Arkanoid
             this.lbl_life.AutoSize = true;
             this.lbl_life.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_life.ForeColor = System.Drawing.Color.Lime;
-            this.lbl_life.Location = new System.Drawing.Point(375, 9);
+            this.lbl_life.Location = new System.Drawing.Point(363, 9);
             this.lbl_life.Name = "lbl_life";
             this.lbl_life.Size = new System.Drawing.Size(92, 28);
             this.lbl_life.TabIndex = 128;
