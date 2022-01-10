@@ -39,7 +39,7 @@ namespace Arkanoid
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(69, 70);
+            this.pictureBox1.Location = new System.Drawing.Point(109, 107);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(220, 112);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -50,7 +50,7 @@ namespace Arkanoid
             // 
             this.start.BackColor = System.Drawing.Color.Maroon;
             this.start.Image = ((System.Drawing.Image)(resources.GetObject("start.Image")));
-            this.start.Location = new System.Drawing.Point(176, 278);
+            this.start.Location = new System.Drawing.Point(229, 312);
             this.start.Name = "start";
             this.start.Size = new System.Drawing.Size(100, 50);
             this.start.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -63,7 +63,7 @@ namespace Arkanoid
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(478, 444);
+            this.ClientSize = new System.Drawing.Size(578, 544);
             this.Controls.Add(this.start);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form2";
