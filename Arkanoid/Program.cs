@@ -16,7 +16,7 @@ namespace Arkanoid
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Arkanoid());
+            Application.Run(new Form2());
         }
     }
 }

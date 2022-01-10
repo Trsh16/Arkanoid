@@ -10,38 +10,39 @@ using System.Windows.Forms;
 
 namespace Arkanoid
 {
-    public partial class Arkanoid : Form
+    public partial class Form4 : Form
     {
-        public Arkanoid()
+        public Form4()
         {
             InitializeComponent();
         }
         int Ball_x = 4;
         int Ball_y = 4;
-        int score = 0;
-        int life = 3;
+        int score = 80;
+        int life = 0;
         private void Game_Over()
         {
-            if (score == 40)
+            if (score == 120)
             {
-                Timer1.Stop();
-                MessageBox.Show("You win! Next Stage!");
+                timer2.Stop();
+                MessageBox.Show("You win!");
             }
             if (ball.Top + ball.Height > ClientSize.Height)
-            {              
-                Timer1.Stop();
+            {
+                timer2.Stop();
                 DialogResult dialogResult = MessageBox.Show("GAME OVER", "Use Life?", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    Timer1.Start();
+                    timer2.Start();
                     Ball_Movement2();
                     life--;
                     lbl_life.Text = "Life : " + life;
                     if (life == 0)
                     {
                         MessageBox.Show("GAME OVER");
+                        System.Environment.Exit(1);
                     }
-                }         
+                }
                 if (dialogResult == DialogResult.No)
                 {
                     System.Environment.Exit(1);
@@ -100,22 +101,12 @@ namespace Arkanoid
             {
                 player.Left += 5;
             }
-        }  
-        private void Load()
-        {
-            if (score == 40)
-            {
-                Form3 game = new Form3();
-                this.SetVisibleCore(false);
-                game.Show();
-            }
         }
         private void Main(object sender, EventArgs e)
         {
             Ball_Movement();
             Get_Score();
             Game_Over();
-            Load();
         }
     }
 }

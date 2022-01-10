@@ -10,30 +10,30 @@ using System.Windows.Forms;
 
 namespace Arkanoid
 {
-    public partial class Arkanoid : Form
+    public partial class Form3 : Form
     {
-        public Arkanoid()
+        public Form3()
         {
             InitializeComponent();
         }
         int Ball_x = 4;
         int Ball_y = 4;
-        int score = 0;
+        int score = 40;
         int life = 3;
         private void Game_Over()
         {
-            if (score == 40)
+            if (score == 80)
             {
-                Timer1.Stop();
-                MessageBox.Show("You win! Next Stage!");
+                timer1.Stop();
+                MessageBox.Show("You win! Last Stage!");
             }
             if (ball.Top + ball.Height > ClientSize.Height)
-            {              
-                Timer1.Stop();
+            {
+                timer1.Stop();
                 DialogResult dialogResult = MessageBox.Show("GAME OVER", "Use Life?", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    Timer1.Start();
+                    timer1.Start();
                     Ball_Movement2();
                     life--;
                     lbl_life.Text = "Life : " + life;
@@ -41,7 +41,7 @@ namespace Arkanoid
                     {
                         MessageBox.Show("GAME OVER");
                     }
-                }         
+                }
                 if (dialogResult == DialogResult.No)
                 {
                     System.Environment.Exit(1);
@@ -100,12 +100,12 @@ namespace Arkanoid
             {
                 player.Left += 5;
             }
-        }  
+        }
         private void Load()
         {
-            if (score == 40)
+            if (score == 80)
             {
-                Form3 game = new Form3();
+                Form4 game = new Form4();
                 this.SetVisibleCore(false);
                 game.Show();
             }
