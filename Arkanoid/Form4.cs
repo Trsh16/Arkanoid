@@ -18,14 +18,14 @@ namespace Arkanoid
         }
         int Ball_x = 4;
         int Ball_y = 4;
-        int score = 80;
+        int score = 88;
         int life = 0;
         private void Game_Over()
         {
-            if (score == 120)
+            if (score == 144)
             {
                 timer2.Stop();
-                MessageBox.Show("You win!");
+                MessageBox.Show("You Win!");
             }
             if (ball.Top + ball.Height > ClientSize.Height)
             {

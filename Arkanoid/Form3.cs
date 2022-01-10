@@ -22,10 +22,10 @@ namespace Arkanoid
         int life = 3;
         private void Game_Over()
         {
-            if (score == 80)
+            if (score == 88)
             {
                 timer1.Stop();
-                MessageBox.Show("You win! Last Stage!");
+                MessageBox.Show("You Win! Last Stage!");
             }
             if (ball.Top + ball.Height > ClientSize.Height)
             {
@@ -103,7 +103,7 @@ namespace Arkanoid
         }
         private void Load()
         {
-            if (score == 80)
+            if (score == 88)
             {
                 Form4 game = new Form4();
                 this.SetVisibleCore(false);

@@ -829,6 +829,7 @@ namespace Arkanoid
             // 
             this.timer2.Enabled = true;
             this.timer2.Interval = 20;
+            this.timer2.Tick += new System.EventHandler(this.Main);
             // 
             // Form4
             // 
