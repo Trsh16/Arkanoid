@@ -66,6 +66,7 @@ namespace Arkanoid
             this.ClientSize = new System.Drawing.Size(578, 544);
             this.Controls.Add(this.start);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
             this.Text = "Arkanoid";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

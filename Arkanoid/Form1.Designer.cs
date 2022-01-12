@@ -674,8 +674,9 @@ namespace Arkanoid
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.ball);
             this.Controls.Add(this.player);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Arkanoid";
-            this.Text = "Stage 1";
+            this.Text = "Arkanoid";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Arkanoid_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ball)).EndInit();
