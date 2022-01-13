@@ -26,7 +26,9 @@ namespace Arkanoid
             {
                 timer2.Stop();
                 MessageBox.Show("You Win!");
-                System.Environment.Exit(1);
+                Form2 game = new Form2();
+                        this.SetVisibleCore(false);
+                        game.Show();
             }
             if (ball.Top + ball.Height > ClientSize.Height)
             {
@@ -41,13 +43,13 @@ namespace Arkanoid
                     ball.Top -= 40;
                     Ball_Movement();
                     lbl_life.Text = "Life : " + life;
-                    if (life == 0)
+                    if (life < 0)
                     {
                         timer2.Start();
                         Ball_Movement2();
                         life--;
-                        ball.Left -= 1000;
-                        ball.Top -= 1000;
+                        ball.Left -= 10000;
+                        ball.Top -= 10000;
                         Ball_Movement();
                         MessageBox.Show("GAME OVER");
                         Form2 game = new Form2();
@@ -57,7 +59,9 @@ namespace Arkanoid
                 }
                 if (dialogResult == DialogResult.No)
                 {
-                    System.Environment.Exit(1);
+                    Form2 game = new Form2();
+                    this.SetVisibleCore(false);
+                    game.Show();
                 }
             }
         }

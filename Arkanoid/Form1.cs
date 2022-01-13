@@ -20,8 +20,6 @@ namespace Arkanoid
         int Ball_y = 4;
         int score = 0;
         int life = 3;
-        int Ball_a = 0;
-        int Ball_b = 0;
         private void Game_Over()
         {
             if (score == 40)
@@ -42,7 +40,7 @@ namespace Arkanoid
                     ball.Top -= 40;
                     Ball_Movement();
                     lbl_life.Text = "Life : " + life;
-                    if (life == 0)
+                    if (life < 0)
                     {
                         Timer1.Start();
                         Ball_Movement2();
@@ -58,7 +56,9 @@ namespace Arkanoid
                 }         
                 if (dialogResult == DialogResult.No)
                 {
-                    System.Environment.Exit(1);
+                    Form2 game = new Form2();
+                    this.SetVisibleCore(false);
+                    game.Show();
                 }
             }
         }
@@ -115,7 +115,7 @@ namespace Arkanoid
                 player.Left += 5;
             }
         }  
-        private void Load()
+        private new void Load()
         {
             if (score == 40)
             {
