@@ -20,6 +20,8 @@ namespace Arkanoid
         int Ball_y = 4;
         int score = 0;
         int life = 3;
+        int Ball_a = 0;
+        int Ball_b = 0;
         private void Game_Over()
         {
             if (score == 40)
@@ -30,16 +32,28 @@ namespace Arkanoid
             if (ball.Top + ball.Height > ClientSize.Height)
             {              
                 Timer1.Stop();
-                DialogResult dialogResult = MessageBox.Show("GAME OVER", "Use Life?", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show("GAME OVER", "Use Life? ", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     Timer1.Start();
                     Ball_Movement2();
                     life--;
+                    ball.Left -= 40;
+                    ball.Top -= 40;
+                    Ball_Movement();
                     lbl_life.Text = "Life : " + life;
                     if (life == 0)
                     {
+                        Timer1.Start();
+                        Ball_Movement2();
+                        life--;
+                        ball.Left -= 1000;
+                        ball.Top -= 1000;
+                        Ball_Movement();
                         MessageBox.Show("GAME OVER");
+                        Form2 game = new Form2();
+                        this.SetVisibleCore(false);
+                        game.Show();
                     }
                 }         
                 if (dialogResult == DialogResult.No)

@@ -648,6 +648,7 @@ namespace Arkanoid
             this.player.TabIndex = 129;
             this.player.TabStop = false;
             this.player.Tag = "";
+            this.player.Click += new System.EventHandler(this.player_Click);
             // 
             // pictureBox35
             // 
