@@ -16,7 +16,7 @@ namespace Arkanoid
         {
             InitializeComponent();
         }
-        private void Load(object sender, EventArgs e)
+        private new void Load(object sender, EventArgs e)
         {
             Arkanoid game = new Arkanoid();
             this.SetVisibleCore(false);
