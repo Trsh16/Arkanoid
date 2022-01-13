@@ -30,19 +30,31 @@ namespace Arkanoid
             if (ball.Top + ball.Height > ClientSize.Height)
             {
                 timer1.Stop();
-                DialogResult dialogResult = MessageBox.Show("GAME OVER", "Use Life?", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
+                DialogResult DialogResult = MessageBox.Show("GAME OVER", "Use Life? ", MessageBoxButtons.YesNo);
+                if (DialogResult == DialogResult.Yes)
                 {
                     timer1.Start();
                     Ball_Movement2();
                     life--;
+                    ball.Left -= 40;
+                    ball.Top -= 40;
+                    Ball_Movement();
                     lbl_life.Text = "Life : " + life;
                     if (life == 0)
                     {
+                        timer1.Start();
+                        Ball_Movement2();
+                        life--;
+                        ball.Left -= 1000;
+                        ball.Top -= 1000;
+                        Ball_Movement();
                         MessageBox.Show("GAME OVER");
+                        Form2 game = new Form2();
+                        this.SetVisibleCore(false);
+                        game.Show();
                     }
                 }
-                if (dialogResult == DialogResult.No)
+                if (DialogResult == DialogResult.No)
                 {
                     System.Environment.Exit(1);
                 }
